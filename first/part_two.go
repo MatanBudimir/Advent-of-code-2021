@@ -15,11 +15,11 @@ type previousResult struct {
 
 func main() {
 	var (
-		fileName string
-		previous previousResult
-		largerCount int = 0
-		first bool = true
-		nums []int
+		fileName    string
+		previous    previousResult
+		largerCount int  = 0
+		first       bool = true
+		nums        []int
 	)
 
 	test := flag.Bool("test", false, "Input file name")
@@ -64,13 +64,13 @@ func main() {
 			break
 		}
 
-		s := sum(nums[previous.lastIndex-3:previous.lastIndex])
+		s := sum(nums[previous.lastIndex-3 : previous.lastIndex])
 
 		if s > previous.num {
 			largerCount++
 		}
 
-		previous = previousResult{previous.lastIndex+1, s}
+		previous = previousResult{previous.lastIndex + 1, s}
 	}
 
 	log.Println(largerCount)

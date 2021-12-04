@@ -11,10 +11,10 @@ import (
 
 func main() {
 	var (
-		fileName string
-		previous int
-		largerCount int = 0
-		first bool = true
+		fileName    string
+		previous    int
+		largerCount int  = 0
+		first       bool = true
 	)
 
 	test := flag.Bool("test", false, "Input file name")
